@@ -1,0 +1,106 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: #f8f8f8;
+  height: 50px;
+  color: #7c8189;
+}
+
+footer {
+  padding: 15px 0;
+  height: 57px;
+  background-color: #f8f8f8;
+  position: fixed;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+}
+
+/* ------------------------------------- */
+/* Login*/
+#btn_back_show_all_book,
+#btn_login {
+  text-decoration: none;
+  color: #7c8189;
+  font-weight: 800;
+}
+
+#btn_login {
+  float: right;
+}
+
+#btn_login:hover,
+#btn_back_show_all_book:hover {
+  color: #ffe020;
+}
+
+/* ------------------------------------- */
+/* Show all book*/
+#btn_add_new_book_show_all_book {
+  background-color: #ffe020;
+}
+
+#btn_add_new_book_show_all_book:hover {
+  color: #fff;
+}
+
+#tbody_show_all_book img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+#btn_edit_show_all_book,
+#btn_del_show_all_book {
+  background-color: #ffe020;
+}
+
+#btn_edit_show_all_book:hover,
+#btn_del_show_all_book:hover {
+  color: #fff;
+}
+
+#card_body_show_all_book a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ------------------------------------- */
+/* Show all category*/
+#btn_add_category_show_all_category {
+  background-color: aquamarine;
+  border: 0px;
+  color: black;
+}
+
+/* ------------------------------------- */
+/* Add category*/
+#btn_add_category_add_category {
+  padding: 5px;
+  background-color: #ffe020;
+  border-radius: 6px;
+  border: 0px;
+}
+
+#btn_add_category_add_category:hover {
+  background-color: #2d799a;
+}
+
+/* ------------------------------------- */
+/* Edit category*/
+#btn_edit_category_name {
+  background-color: #ffe020;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#btn_back_edit_category {
+  padding: 10px;
+  background-color: aqua;
+  border: 0px;
+  border-radius: 5px;
+}
