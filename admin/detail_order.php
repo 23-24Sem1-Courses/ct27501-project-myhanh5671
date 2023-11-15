@@ -51,7 +51,7 @@ if (isset($_GET['btn_update_status_detail_order']) && isset($_GET['id_of_order']
         <div class="container">
             <div class="row align-items-center" style="height: 50px;">
                 <div class="col-sm-6">
-                    <a id="btn_back_show_all_book" href="show_all_book.php">CHASTAIN</a>
+                    <a id="btn_back_show_all_book" href="show_all_book.php">HK book store</a>
                 </div>
                 <div class="col-sm-6">
                     <a id="btn_login" href="logout.php">Đăng xuất</a>
@@ -62,7 +62,7 @@ if (isset($_GET['btn_update_status_detail_order']) && isset($_GET['id_of_order']
     <!-- header dùng chung -->
     <main class="container" style="margin-top: 50px; margin-bottom: 100px">
         <div class="row">
-            <h3 class="text-center">CHASTAIN</h3>
+            <h3 class="text-center">HK book store</h3>
             <p class="text-center">Chi tiết đơn hàng</p>
         </div>
 
@@ -76,7 +76,7 @@ if (isset($_GET['btn_update_status_detail_order']) && isset($_GET['id_of_order']
                 <caption>Đơn hàng: #<?php if (isset($_GET['id_of_order'])) {echo $_GET['id_of_order'];}?></caption>
                 <thead>
                     <tr>
-                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Tên sách</th>
                         <th scope="col">Giá</th>
                         <th scope="col">Số lượng</th>
                         <th scope="col">Thành tiền</th>
@@ -119,7 +119,7 @@ if (isset($result_of_detail_order)) {
     </main>
     <!-- footer dùng chung -->
     <footer>
-        <p class="container text-center">Copyright © 2022, Chastain Powered by B1910015</p>
+        <p class="container text-center">Copyright 2023 ©HK</p>
     </footer>
     <!-- footer dùng chung -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

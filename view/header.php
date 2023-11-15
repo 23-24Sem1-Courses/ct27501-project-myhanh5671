@@ -30,8 +30,8 @@ $result_of_all_category = get_all_category();
     <header>
         <div id="main_header" class="container">
             <div class="row header-custom">
-                <div class="col-3 d-block mb-3" href="?action=home"><img id="logo_header" src="../view/img/logo.png"
-                        alt=""></div>
+                <a class="col-3 d-block mb-3" href="?action=home"><img id="logo_header" src="../view/img/logo.png"
+                        alt=""></a>
                 <div class="col-9">
                     <div class="d-flex align-items-center justify-content-end" style="height: 100%">
                         <form id="form_search_book_header" action="#" method="get"
@@ -40,7 +40,7 @@ $result_of_all_category = get_all_category();
                             <input type="hidden" name="action" value="search_book">
                             <div class="input-group">
                                 <input id="search_input_header" name="search_input_header" type="text"
-                                    placeholder="Tìm sản phẩm ...">
+                                    placeholder="Tìm sách ...">
                                 <button class="btn" id="search_btn_header" type="submit"><i
                                         class="fas fa-search"></i></button>
                             </div>

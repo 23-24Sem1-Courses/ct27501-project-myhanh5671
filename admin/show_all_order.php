@@ -9,6 +9,7 @@ if (empty($_COOKIE['admin_login_successful'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,13 +24,15 @@ if (empty($_COOKIE['admin_login_successful'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- header dùng chung -->
     <header>
         <div class="container">
             <div class="row align-items-center" style="height: 50px;">
                 <div class="col-sm-6">
-                    <a id="btn_back_show_all_book" href="show_all_book.php">CHASTAIN</a>
+                    <a id="btn_back_show_all_book" href="show_all_book.php">HK book store
+                    </a>
                 </div>
                 <div class="col-sm-6">
                     <a id="btn_login" href="logout.php">Đăng xuất</a>
@@ -40,7 +43,8 @@ if (empty($_COOKIE['admin_login_successful'])) {
     <!-- header dùng chung -->
     <main class="container" style="margin-top: 50px; margin-bottom: 100px">
         <div class="row">
-            <h3 class="text-center">CHASTAIN</h3>
+            <h3 class="text-center">HK book store
+            </h3>
             <p class="text-center">Tất cả đơn hàng ở đây</p>
         </div>
         <table class="table table-bordered">
@@ -59,32 +63,35 @@ if (empty($_COOKIE['admin_login_successful'])) {
                 <?php if (isset($result_of_all_orders)) {
     foreach ($result_of_all_orders as $value) {
         ?>
-                    <tr>
-                        <td><a style="text-decoration: none;" href="detail_order.php?id_of_order=<?php echo $value['id']; ?>&status_of_order=<?php echo $value['status']; ?>">#<?php echo $value['id']; ?></a></td>
-                        <td>
-                            <p><?php echo $value['full_name']; ?></p>
-                            <p><?php echo $value['phone_number']; ?></p>
-                        </td>
-                        <td><?php echo $value['address']; ?></td>
-                        <td><?php echo $value['email']; ?></td>
-                        <td><?php echo number_format($value['total'], 0, ",", ".") . "đ"; ?></td>
-                        <td><?php echo $value['payment']; ?></td>
-                        <td><?php echo $value['status']; ?></td>
-                    </tr>
+                <tr>
+                    <td><a style="text-decoration: none;"
+                            href="detail_order.php?id_of_order=<?php echo $value['id']; ?>&status_of_order=<?php echo $value['status']; ?>">#<?php echo $value['id']; ?></a>
+                    </td>
+                    <td>
+                        <p><?php echo $value['full_name']; ?></p>
+                        <p><?php echo $value['phone_number']; ?></p>
+                    </td>
+                    <td><?php echo $value['address']; ?></td>
+                    <td><?php echo $value['email']; ?></td>
+                    <td><?php echo number_format($value['total'], 0, ",", ".") . "đ"; ?></td>
+                    <td><?php echo $value['payment']; ?></td>
+                    <td><?php echo $value['status']; ?></td>
+                </tr>
                 <?php }}?>
             </tbody>
         </table>
     </main>
     <!-- footer dùng chung -->
     <footer>
-        <p class="container text-center">Copyright © 2022, Chastain Powered by B1910015</p>
+        <p class="container text-center">Copyright 2023 ©HK</p>
     </footer>
     <!-- footer dùng chung -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-        crossorigin="anonymous"></script>
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

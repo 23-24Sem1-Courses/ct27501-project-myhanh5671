@@ -1,5 +1,5 @@
 <!-- done -->
-<title>Sản phẩm</title>
+<title>Books</title>
 <style>
 .item-custom-child {
     transition: border-color 0.3s ease;
@@ -22,11 +22,11 @@
     </nav>
 </div>
 <main class="container mt-3">
-    <h3 class="text-center" id="title_book"><span><?php echo mb_strtoupper($name_of_category); ?></span></h3>
+    <h3 id="title_about"><span><?php echo mb_strtoupper($name_of_category); ?></span></h3>
     <div id="list_book" class="row mt-5">
         <?php
 foreach ($list_of_book as $value) {?>
-        <div class="col-md-3 col-6 list_item_book mb-4 item-custom">
+        <div class="col-md-3 col-6 list_item_book mb-4">
             <div class="item-custom-child">
                 <a href="?action=book_details&id_of_book=<?php echo $value['id'] ?>" class="d-block">
                     <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">

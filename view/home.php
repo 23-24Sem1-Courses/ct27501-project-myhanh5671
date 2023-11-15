@@ -1,5 +1,31 @@
 <!-- done -->
 <title>Trang chủ</title>
+<style>
+.item-custom-child {
+    transition: border-color 0.3s ease;
+    padding: 10px;
+}
+
+.item-custom-child:hover {
+    box-shadow: 0px 1px 8px 1px #AAA;
+}
+
+.title-home {
+    font-weight: 800;
+    border-bottom: 3px solid #bc1c22;
+    font-size: 25px;
+    display: flex;
+    padding-bottom: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    /* Loại bỏ dấu gạch dưới */
+    color: inherit;
+    /* Sử dụng màu chữ mặc định của phần tử cha */
+}
+</style>
 <main>
     <div>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -27,114 +53,123 @@
 
     <div class="container mt-4">
         <div class="row">
-            <div class="mb-4 col-lg-4 col-sm-6 banner_info_relative_home">
-                <img class="w-100"
-                    src="https://bizweb.dktcdn.net/100/341/634/themes/802010/assets/banner_1.jpg?1665824874739" alt="">
-                <div class="banner_info_absolute_home">
-                    <p>SÁCH GIẢM GIÁ</p>
-                    <a href="../public/index.php?action=list_book&id_of_category=all">MUA NGAY</a>
-                </div>
+            <div class="col-6 banner_info_relative_home">
+                <a href="../public/index.php?action=list_book&id_of_category=1"> <img class="w-100"
+                        src="../view/img/home/img-right.jpg" alt="">
+                </a>
             </div>
-            <div class="mb-4 col-lg-4 col-sm-6 banner_info_relative_home">
-                <img class="w-100"
-                    src="https://bizweb.dktcdn.net/100/341/634/themes/802010/assets/banner_2.jpg?1665824874739" alt="">
-                <div class="banner_info_absolute_home">
-                    <p>MUA NGAY 60%</p>
-                    <a href="../public/index.php?action=list_book&id_of_category=all">MUA NGAY</a>
-                </div>
-            </div>
-            <div class="mb-4 col-lg-4 col-sm-6 banner_info_relative_home">
-                <img class="w-100"
-                    src="https://bizweb.dktcdn.net/100/341/634/themes/802010/assets/banner_3.jpg?1665824874739" alt="">
-                <div class="banner_info_absolute_home">
-                    <p></p>
-                    <a href="../public/index.php?action=list_book&id_of_category=all">MUA NGAY</a>
-                </div>
+            <div class="col-6 banner_info_relative_home">
+                <a href="../public/index.php?action=list_book&id_of_category=all"> <img class="w-100"
+                        src="../view/img/home/img-left.jpg" alt="">
+                </a>
             </div>
         </div>
-        <div class="container mt-4">
-            <h4 class="text-center title_section_home"><span>SÁCH MỚI</span></h4>
-            <div class="row mt-5" id="new_book_home">
-                <div class="col-6 col-md-3 new_book_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=35"><img src="../admin/upload/rodeo.png"
-                            alt=""></a>
-                    <a href="?action=book_details&id_of_book=35"
-                        class="d-block text-center mt-3 name_of_new_book_home">MVMT
-                        Rodeo</a>
-                    <p class="text-center price_of_new_book_home">3.500.000đ</p>
+        <div class="container mt-5">
+            <h4 class="title-home mt-2"><span>SÁCH MỚI</span></h4>
+            <div class="row mt-4" id="new_book_home">
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=108">
+                        <img src="../admin/upload/dêmn.jpg" alt=""></a>
+                    <a href="?action=book_details&id_of_book=108"
+                        class="d-block text-center mt-3 name_of_new_book_home">DẾ MÈN PHIÊU LƯU KÝ</a>
+                    <p class="text-center price_of_new_book_home">202.500đ</p>
                 </div>
-                <div class="col-6 col-md-3 new_book_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=42"><img
-                            src="../admin/upload/twist_cuff.png" alt=""></a>
-                    <a href="?action=book_details&id_of_book=42"
-                        class="d-block text-center mt-3 name_of_new_book_home">MVMT
-                        Twist Cuff</a>
-                    <p class="text-center price_of_new_book_home">2.400.000đ</p>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=87"><img
+                            src="../admin/upload/Ngay-nghi.jpg" alt=""></a>
+                    <a href="?action=book_details&id_of_book=87"
+                        class="d-block text-center mt-3 name_of_new_book_home">NGÀY NGHỈ CỦA NGÀI PHẢN DIỆN - TẬP 5</a>
+                    <p class="text-center price_of_new_book_home">36.000đ</p>
                 </div>
-                <div class="col-6 col-md-3 new_book_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=40"><img src="../admin/upload/p.png"
-                            alt=""></a>
-                    <a href="?action=book_details&id_of_book=40"
-                        class="d-block text-center mt-3 name_of_new_book_home">Daniel Wellington Sherry</a>
-                    <p class="text-center price_of_new_book_home">3.600.000đ</p>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=93">
+                        <img src="../admin/upload/hancap.webp" alt=""></a>
+                    <a href="?action=book_details&id_of_book=93"
+                        class="d-block text-center mt-3 name_of_new_book_home">NHÂN VẬT HẠ CẤP TOMOZAKI - TẬP 6</a>
+                    <p class="text-center price_of_new_book_home">99.900đ</p>
                 </div>
-                <div class="col-6 col-md-3 new_book_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=47"><img
-                            src="../admin/upload/origin_bracelet.png" alt=""></a>
-                    <a href="?action=book_details&id_of_book=47"
-                        class="d-block text-center mt-3 name_of_new_book_home">MVMT
-                        Origin Bracelet</a>
-                    <p class="text-center price_of_new_book_home">2.800.000đ</p>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=109">
+                        <img src="../admin/upload/buon.jpg" alt=""></a>
+                    <a href="?action=book_details&id_of_book=109"
+                        class="d-block text-center mt-3 name_of_new_book_home">TRUYỆN BUỒN CHẲNG CÓ THẬT ĐÂU (THẬT ĐẤY)
+
+                    </a>
+                    <p class="text-center price_of_new_book_home">103.500đ
+
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <h4 class="text-center title_section_home"><span>SÁCH BÁN CHẠY</span></h4>
+            <h4 class="mt-4 title-home"><span>SÁCH BÁN CHẠY</span></h4>
 
-            <div class="row mt-5" id="featured_books_home">
-                <div class="col-lg-4 col-6 featured_books_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=25"><img
-                            src="../admin/upload/black_link.png" alt=""></a>
-                    <a href="?action=book_details&id_of_book=25"
-                        class="d-block text-center name_of_featured_books_home mt-3">MVMT Black Link</a>
-                    <p class="text-center price_of_featured_books_home">3.200.000đ</p>
-                </div>
-                <div class="col-lg-4 col-6 featured_books_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=32"><img
-                            src="../admin/upload/champion_gold.png" alt=""></a>
-                    <a href="?action=book_details&id_of_book=32"
-                        class="d-block text-center name_of_featured_books_home mt-3">Orient Champion Gold</a>
-                    <p class="text-center price_of_featured_books_home">5.700.000đ</p>
-                </div>
-                <div class="col-lg-4 col-6 featured_books_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=31"><img src="../admin/upload/axiom.png"
+            <div class="row mt-4" id="featured_books_home">
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=96"><img src="../admin/upload/nhóc.jpg"
                             alt=""></a>
-                    <a href="?action=book_details&id_of_book=31"
-                        class="d-block text-center name_of_featured_books_home mt-3">Hublot Axiom</a>
-                    <p class="text-center price_of_featured_books_home">4.600.000đ</p>
+                    <a href="?action=book_details&id_of_book=96"
+                        class="d-block text-center name_of_featured_books_home mt-3">Nhóc MARUTO - TẬP 3
+                    </a>
+                    <p class="text-center price_of_featured_books_home">36.000đ</p>
                 </div>
-                <div class="col-lg-4 col-6 featured_books_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=33"><img
-                            src="../admin/upload/coronada_blanc.png" alt=""></a>
-                    <a href="?action=book_details&id_of_book=33"
-                        class="d-block text-center name_of_featured_books_home mt-3">MVMT Coronada Blanc</a>
-                    <p class="text-center price_of_featured_books_home">3.800.000đ</p>
-                </div>
-                <div class="col-lg-4 col-6 featured_books_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=37"><img src="../admin/upload/s1.png"
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=111"><img src="../admin/upload/coban.jpg"
                             alt=""></a>
-                    <a href="?action=book_details&id_of_book=37"
-                        class="d-block text-center name_of_featured_books_home mt-3">Rolex S1</a>
-                    <p class="text-center price_of_featured_books_home">2.800.000đ</p>
+                    <a href="?action=book_details&id_of_book=111"
+                        class="d-block text-center name_of_featured_books_home mt-3">CƠ BẢN LÀ CƠ BẢN</a>
+                    <p class="text-center price_of_featured_books_home">43.200đ</p>
                 </div>
-                <div class="col-lg-4 col-6 featured_books_item_home">
-                    <a class="d-block" href="?action=book_details&id_of_book=38"><img src="../admin/upload/aubrey.png"
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=108"><img src="../admin/upload/dêmn.jpg"
                             alt=""></a>
-                    <a href="?action=book_details&id_of_book=38"
-                        class="d-block text-center name_of_featured_books_home mt-3">Orient Aubrey</a>
-                    <p class="text-center price_of_featured_books_home">4.600.000đ</p>
+                    <a href="?action=book_details&id_of_book=108"
+                        class="d-block text-center name_of_featured_books_home mt-3">DẾ MÈN PHIÊU LƯU KÝ</a>
+                    <p class="text-center price_of_featured_books_home">202.500đ</p>
                 </div>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=117"><img src="../admin/upload/tia.jpg"
+                            alt=""></a>
+                    <a href="?action=book_details&id_of_book=117"
+                        class="d-block text-center name_of_featured_books_home mt-3">NHỮNG TIA NẮNG ĐẦU TIÊN</a>
+                    <p class="text-center price_of_featured_books_home">57.000đ</p>
+                </div>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=113">
+                        <img src="../admin/upload/one2.jpg" alt=""></a>
+                    <a href="?action=book_details&id_of_book=113"
+                        class="d-block text-center name_of_featured_books_home mt-3">TIỂU THUYẾT ONE PIECE - CHUYỆN CHƯA
+                        KỂ VỀ BĂNG MŨ RƠM</a>
+                    <p class="text-center price_of_featured_books_home">43.200đ</p>
+                </div>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=115">
+                        <img src="../admin/upload/cobe.webp" alt=""></a>
+                    <a href="?action=book_details&id_of_book=115"
+                        class="d-block text-center name_of_featured_books_home mt-3">CÔ BÉ NỌ CÓ MỘT CON GẤU</a>
+                    <p class="text-center price_of_featured_books_home">50.000đ</p>
+                </div>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=114">
+                        <img src="../admin/upload/conna.jpg" alt=""></a>
+                    <a href="?action=book_details&id_of_book=114"
+                        class="d-block text-center name_of_featured_books_home mt-3">THÁM TỬ LỪNG DANH CONAN - 15 PHÚT
+                        TRẦM MẶC</a>
+                    <p class="text-center price_of_featured_books_home">45.000đ</p>
+                </div>
+                <div class="col-6 col-md-3 new_book_item_home item-custom-child">
+                    <a class="d-block" href="?action=book_details&id_of_book=116">
+                        <img src="../admin/upload/chiendao.jpg" alt=""></a>
+                    <a href="?action=book_details&id_of_book=116"
+                        class="d-block text-center name_of_featured_books_home mt-3">CHIẾN ĐẠO - LÀM CHỦ TƯƠNG LAI &
+                        KIẾN TẠO SỰ NGHIỆP</a>
+                    <p class="text-center price_of_featured_books_home">88.000đ</p>
+                </div>
+                <a href="../public/index.php?action=list_book&id_of_category=all">
+                    <p class="text-center text-primary mt-4">Xem thêm >></p>
+
+                </a>
             </div>
         </div>
 

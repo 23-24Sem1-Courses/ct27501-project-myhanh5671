@@ -36,10 +36,10 @@ if ($status_login_admin == 'no') {
         <div class="container">
             <div class="row align-items-center" style="height: 50px;">
                 <div class="col-sm-6">
-                    <a id="btn_back_show_all_book" href="#">CHASTAIN</a>
+                    <a id="btn_back_show_all_book" href="#">HK book store</a>
                 </div>
                 <div class="col-sm-6">
-                    <a id="btn_login" href="#">Login</a>
+                    <a id="btn_login" href="#">Đăng nhập</a>
                 </div>
             </div>
         </div>
@@ -50,7 +50,8 @@ if ($status_login_admin == 'no') {
         <div class="container">
             <div class="row">
                 <div class="col-3"></div>
-                <form class="col" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"><!-- bổ sung action -->
+                <form class="col" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <!-- bổ sung action -->
                     <div class="mb-3">
                         <label for="user_login" class="form-label">User*</label>
                         <input type="text" name="user_login" class="form-control" id="user_login">
@@ -69,15 +70,17 @@ if ($status_login_admin == 'no') {
 
     <!-- footer dùng chung -->
     <footer>
-        <p class="container text-center">Copyright © 2022, Chastain Powered by B1910015</p>
+        <p class="container text-center">Copyright 2023 ©HK
+
+        </p>
     </footer>
     <!-- footer dùng chung -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-        crossorigin="anonymous"></script>
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
