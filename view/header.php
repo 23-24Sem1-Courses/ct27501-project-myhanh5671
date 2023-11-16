@@ -105,9 +105,6 @@ if (isset($result_of_all_category)) {
                                         href="../public/index.php?action=list_book&id_of_category=<?php echo $value['id']; ?>"><?php echo $value['category_name'] ?></a>
                                 </li>
                                 <?php }}?>
-                                <!-- <li><a class="dropdown-item" href="../public/index.php?action=list_book&id_of_category=1">Đồng hồ nam</a></li>
-                            <li><a class="dropdown-item" href="../public/index.php?action=list_book&id_of_category=2">Đồng hồ nữ</a></li>
-                            <li><a class="dropdown-item" href="../public/index.php?action=list_book&id_of_category=3">Phụ kiện</a></li> -->
                             </ul>
                         </li>
                         <li class="nav-item mx-3">
