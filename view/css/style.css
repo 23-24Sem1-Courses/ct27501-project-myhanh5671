@@ -495,10 +495,11 @@ header {
 }
 
 #info_account_info,
-#change_account_info,
-#change_password {
+#change_account_info {
   padding         : 30px;
   background-color: #f1f1f1;
+  border: 1px solid #d1e7dd;
+    border-radius: 5px;
 }
 
 #info_account_info>h3,

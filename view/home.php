@@ -4,6 +4,7 @@
 .item-custom-child {
     transition: border-color 0.3s ease;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .item-custom-child:hover {

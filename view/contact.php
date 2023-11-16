@@ -25,8 +25,7 @@
                     <input type="email" class="form-control" id="email_contact_info_contact"
                         name="email_contact_info_contact" aria-describedby="emailHelp" placeholder="Nhập email của bạn"
                         required>
-                    <div id="emailHelp" class="form-text">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai
-                        khác.</div>
+
                 </div>
                 <div class="mb-3">
                     <label for="sdt_contact_info_contact" class="form-label">Số điện thoại*</label>
@@ -74,7 +73,7 @@
     </div>
     <div class="row mt-3">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.947211212446!2d105.73941541474248!3d10.021215092836595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a08850d710382b%3A0xa0ee524a026ecd1e!2zMzI0IEhvw6BuZyBRdeG7kWMgVmnhu4d0LCBBbiBCw6xuaCwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1668612362822!5m2!1svi!2s"
+            src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d15715.877764085764!2d105.7461057!3d10.0193804!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x31a0895a51d60719%3A0x9d76b0035f6d53d0!2zxJDhuqFpIGjhu41jIEPhuqduIFRoxqEsIMSQb3VuZyAzIFRow6FuZyAyLCBYdcOibiBLaMOhbmgsIE5pbmggS2nhu4F1LCBD4bqnbiBUaMah!3m2!1d10.029933699999999!2d105.77061529999999!4m5!1s0x31a08850d710382b%3A0xa0ee524a026ecd1e!2zMzI0IMSQLiBIb8OgbmcgUXXhu5FjIFZp4buHdCBBbiBCw6xuaCBOaW5oIEtp4buBdSBD4bqnbiBUaMah!3m2!1d10.0212151!2d105.74160409999999!5e0!3m2!1sfr!2s!4v1700126581697!5m2!1sfr!2s"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

@@ -4,6 +4,12 @@
 .item-custom-child {
     transition: border-color 0.3s ease;
     padding: 10px;
+    border-radius: 10px;
+}
+
+.text-color:hover {
+    color: #0d6efd;
+    cursor: pointer;
 }
 
 .item-custom-child:hover {
@@ -27,12 +33,12 @@
         <?php
 foreach ($list_of_book as $value) {?>
         <div class="col-md-3 col-6 list_item_book mb-4">
-            <div class="item-custom-child">
+            <div class=" new_book_item_home item-custom-child name_of_new_book_home">
                 <a href="?action=book_details&id_of_book=<?php echo $value['id'] ?>" class="d-block">
                     <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">
                 </a>
                 <h6 href="?action=book_details&id_of_book=<?php echo $value['id'] ?>" class="d-block text-center mt-3">
-                    <strong> <?php echo $value['book_name']; ?></strong>
+                    <strong class="text-color"> <?php echo $value['book_name']; ?></strong>
                 </h6>
                 <h6 class="text-center"><?php echo number_format($value['price'], 0, ",", ".") . " đ"; ?></h6>
             </div>
