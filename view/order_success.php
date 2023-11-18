@@ -1,12 +1,11 @@
 <!-- done -->
 <title>Đặt hàng thành công</title>
-<main style="background-color: #e6e8ea; padding: 30px 0;" class="container-fluid">
+<main style="padding: 30px 0;" class="container-fluid">
     <div class="text-center">
-        <h3 style="color: #ffe020; font-weight: 600; font-size: 30px;">HK book store
+        <h3 style="color: #ffe020; font-weight: 600; font-size: 30px;">HK Book Store
         </h3>
     </div>
     <div class="text-center">
-        <i style="font-size: 24px; color: #ffe020;" class="fas fa-cart-plus"></i>&nbsp;&nbsp;&nbsp;
         <span style="font-size: 24px; font-weight: 600;">ĐẶT HÀNG THÀNH CÔNG</span>
     </div>
     <div class="container mt-5">

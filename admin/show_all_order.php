@@ -31,7 +31,7 @@ if (empty($_COOKIE['admin_login_successful'])) {
         <div class="container">
             <div class="row align-items-center" style="height: 50px;">
                 <div class="col-sm-6">
-                    <a id="btn_back_show_all_book" href="show_all_book.php">HK book store
+                    <a id="btn_back_show_all_book" href="show_all_book.php">HK Book Store
                     </a>
                 </div>
                 <div class="col-sm-6">
@@ -43,7 +43,7 @@ if (empty($_COOKIE['admin_login_successful'])) {
     <!-- header dùng chung -->
     <main class="container" style="margin-top: 50px; margin-bottom: 100px">
         <div class="row">
-            <h3 class="text-center">HK book store
+            <h3 class="text-center">HK Book Store
             </h3>
             <p class="text-center">Tất cả đơn hàng ở đây</p>
         </div>

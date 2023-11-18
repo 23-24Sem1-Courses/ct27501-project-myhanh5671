@@ -36,7 +36,7 @@ if ($status_login_admin == 'no') {
         <div class="container">
             <div class="row align-items-center" style="height: 50px;">
                 <div class="col-sm-6">
-                    <a id="btn_back_show_all_book" href="#">HK book store</a>
+                    <a id="btn_back_show_all_book" href="#">HK Book Store</a>
                 </div>
                 <div class="col-sm-6">
                     <a id="btn_login" href="#">Đăng nhập</a>

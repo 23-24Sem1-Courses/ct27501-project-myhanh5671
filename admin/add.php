@@ -68,7 +68,7 @@ if (isset($_POST['btn_add_book_add'])) {
         <div class="container">
             <div class="row align-items-center" style="height: 50px;">
                 <div class="col-sm-6">
-                    <a id="btn_back_show_all_book" href="show_all_book.php">HK book store</a>
+                    <a id="btn_back_show_all_book" href="show_all_book.php">HK Book Store</a>
                 </div>
                 <div class="col-sm-6">
                     <a id="btn_login" href="logout.php">Đăng xuất</a>
@@ -79,7 +79,7 @@ if (isset($_POST['btn_add_book_add'])) {
     <!-- header dùng chung -->
     <main class="container" style="margin-top: 50px; margin-bottom: 100px;">
         <div class="row">
-            <h3 class="text-center">HK book store</h3>
+            <h3 class="text-center">HK Book Store</h3>
             <p class="text-center">Thêm sách mới</p>
         </div>
         <div class="row">
