@@ -35,9 +35,9 @@
 }
 </style>
 <div id="breadcrumb_background">
-    <p id="title_breadcrumb" class="text-center">CHI TIẾT SẢN PHẨM</p>
+    <p id="title_breadcrumb">CHI TIẾT SẢN PHẨM</p>
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-center">
+        <ol class="breadcrumb ">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
             <?php if (isset($id_of_category) && isset($name_of_category)): ?>
             <li style="font-weight: 600;" class="breadcrumb-item">

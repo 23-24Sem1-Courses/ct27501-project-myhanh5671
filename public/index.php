@@ -52,12 +52,12 @@ if (isset($_GET['action'])) {
             include PATH_TO_FILE_PDO;
             if (isset($_GET['id_of_category'])) {
                 if ($_GET['id_of_category'] == 'all') {
-                    $name_of_category = 'TẤT CẢ SẢN PHẨM'; //tên của loại sản phẩm
+                    $name_of_category = 'TẤT CẢ SÁCH'; //tên của loại
                 } else {
                     $sql = "select * from category where id=?";
                     $stmt = $conn->prepare($sql);
                     $stmt->execute([$_GET['id_of_category']]);
-                    $name_of_category = $stmt->fetch()['category_name']; //tên của loại sản phẩm
+                    $name_of_category = $stmt->fetch()['category_name']; //tên của loại
                 }
             }
             include '../view/book.php';

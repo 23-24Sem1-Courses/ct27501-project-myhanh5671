@@ -90,13 +90,13 @@ $result_of_all_category = get_all_category();
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false"
                                 <?php if (isset($_GET['action']) && $_GET['action'] == 'agree_order') {echo 'style="pointer-events: none;"';}if (isset($_GET['action']) && $_GET['action'] == 'list_book') {echo 'style="color: white;"';}?>>
-                                SẢN PHẨM
+                                DANH MỤC SÁCH
                                 <!-- bổ sung href  -->
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item"
-                                        href="../public/index.php?action=list_book&id_of_category=all">Tất cả sản
-                                        phẩm</a></li>
+                                        href="../public/index.php?action=list_book&id_of_category=all">Tất cả sách</a>
+                                </li>
                                 <?php
 if (isset($result_of_all_category)) {
     foreach ($result_of_all_category as $value) {

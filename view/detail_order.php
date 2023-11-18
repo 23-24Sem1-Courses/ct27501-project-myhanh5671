@@ -1,8 +1,8 @@
 <title>Chi tiết đơn hàng</title>
 <div id="breadcrumb_background">
-    <p id="title_breadcrumb" class="text-center">CHI TIẾT ĐƠN HÀNG</p>
+    <p id="title_breadcrumb">CHI TIẾT ĐƠN HÀNG</p>
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-center">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
             <li style="font-weight: 600;" class="breadcrumb-item"><a
                     href="../public/index.php?action=account_info">Thông tin của tôi</a></li>&nbsp;

@@ -1,9 +1,8 @@
 <!-- done -->
 <title>Tìm kiếm</title>
 <div id="breadcrumb_background">
-    <p id="title_breadcrumb" class="text-center">KẾT QUẢ TÌM KIẾM</p>
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-center">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
             <li class="breadcrumb-item active" aria-current="page"
                 style="color: #ffe020; font-weight: 600; font-size: 16px;">&nbsp;Tìm kiếm</li>

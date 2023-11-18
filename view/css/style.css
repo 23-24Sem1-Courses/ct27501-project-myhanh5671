@@ -112,12 +112,9 @@ header {
 /* ------------------------------------- */
 /* Breadcrumb */
 #breadcrumb_background {
-  background-image: url("../img/bia.webp");
   background-size : cover;
   width           : 100%;
-  height          : 203px;
-  padding         : 60px 0 80px 0;
-  margin-bottom   : 30px;
+  margin: 30px 110px;
 }
 
 #title_breadcrumb {
@@ -127,12 +124,12 @@ header {
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-  content: ">" !important;
-  color  : #fff;
+  content: "/" !important;
+  color  : black;
 }
 
 #breadcrumb_background a {
-  color          : #fff;
+  color          : black;
   text-decoration: none;
   font-size      : 16px;
   font-weight    : 700;

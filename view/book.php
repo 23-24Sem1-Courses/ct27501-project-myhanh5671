@@ -1,49 +1,35 @@
 <!-- done -->
-<title>Books</title>
-<style>
-.item-custom-child {
-    transition: border-color 0.3s ease;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.text-color:hover {
-    color: #0d6efd;
-    cursor: pointer;
-}
-
-.item-custom-child:hover {
-    box-shadow: 0px 1px 8px 1px #AAA;
-}
-</style>
+<title>Tìm kiếm</title>
 <div id="breadcrumb_background">
-    <p id="title_breadcrumb" class="text-center"><?php echo mb_strtoupper($name_of_category); ?></p>
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-center">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
             <li class="breadcrumb-item active" aria-current="page"
-                style="color: #ffe020; font-weight: 600; font-size: 16px;">
-                &nbsp;<?php echo ucfirst($name_of_category); ?></li>
+                style="color: #ffe020; font-weight: 600; font-size: 16px;">&nbsp;Tìm kiếm</li>
         </ol>
     </nav>
 </div>
-<main class="container mt-3">
-    <h3 id="title_about"><span><?php echo mb_strtoupper($name_of_category); ?></span></h3>
-    <div id="list_book" class="row mt-5">
-        <?php
-foreach ($list_of_book as $value) {?>
-        <div class="col-md-3 col-6 list_item_book mb-4">
-            <div class=" new_book_item_home item-custom-child name_of_new_book_home">
-                <a href="?action=book_details&id_of_book=<?php echo $value['id'] ?>" class="d-block">
-                    <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">
-                </a>
-                <h6 href="?action=book_details&id_of_book=<?php echo $value['id'] ?>" class="d-block text-center mt-3">
-                    <strong class="text-color"> <?php echo $value['book_name']; ?></strong>
-                </h6>
-                <h6 class="text-center"><?php echo number_format($value['price'], 0, ",", ".") . " đ"; ?></h6>
-            </div>
+<main class="container">
+    <h2>Tìm thấy <?php if (isset($result_search_book)) {
+    echo count($result_search_book);
+} else {echo "0";}?>
+        kết quả với từ khóa "<?php if (isset($_GET['search_input_header'])) {
+    echo $_GET['search_input_header'];
+}
+?>"</h2>
+    <div class="row mt-5">
+        <?php if (isset($result_search_book)) {
+    foreach ($result_search_book as $value) {?>
 
+        <div class="col-md-3 col-6 list_item_search_book">
+            <a href="?action=book_details&id_of_book=<?php echo $value['id'] ?>" class="d-block">
+                <!-- bổ sung href -->
+                <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">
+            </a>
+            <a href="?action=book_details&id_of_book=<?php echo $value['id'] ?>"
+                class="d-block text-center mt-3"><?php echo $value['book_name']; ?></a>
+            <p class="text-center"><?php echo number_format($value['price'], 0, ",", ".") . "đ"; ?></p>
         </div>
-        <?php }?>
+        <?php }}?>
     </div>
 </main>
