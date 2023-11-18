@@ -1,18 +1,10 @@
 <?php
 include 'file_handle_admin.php';
+$result_of_all_orders = get_all_order();
 
 if (empty($_COOKIE['admin_login_successful'])) {
     header("Location: login.php");
 }
-
-$result_of_all_category = get_all_category();
-
-if (isset($_GET['delete_category']) && isset($_GET['id_of_category'])) {
-    delete_book_of_a_category($_GET['id_of_category']);
-    delete_category($_GET['id_of_category']);
-    header("Location: show_all_category.php");
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +14,7 @@ if (isset($_GET['delete_category']) && isset($_GET['id_of_category'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý danh mục sách</title>
+    <title>Đơn hàng</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -39,7 +31,8 @@ if (isset($_GET['delete_category']) && isset($_GET['id_of_category'])) {
         <div class="container">
             <div class="row align-items-center" style="height: 50px;">
                 <div class="col-sm-6">
-                    <a id="btn_back_show_all_book" href="show_all_book.php">HK book store</a>
+                    <a id="btn_back_show_all_book" href="show_all_book.php">HK book store
+                    </a>
                 </div>
                 <div class="col-sm-6">
                     <a id="btn_login" href="logout.php">Đăng xuất</a>
@@ -50,64 +43,41 @@ if (isset($_GET['delete_category']) && isset($_GET['id_of_category'])) {
     <!-- header dùng chung -->
     <main class="container" style="margin-top: 50px; margin-bottom: 100px">
         <div class="row">
-            <h3 class="text-center">HK book store</h3>
-            <p class="text-center">Tất cả danh mục sách</p>
-        </div>
-        <div class="row mb-3">
-            <a href="add_category.php"><button id="btn_add_category_show_all_category" class="btn btn-primary">Thêm
-                    loại sách mới</button></a>
+            <h3 class="text-center">HK book store
+            </h3>
+            <p class="text-center">Tất cả đơn hàng ở đây</p>
         </div>
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th scope="col">Tên danh mục sách</th>
-                    <th scope="col"></th>
+                    <th scope="col">Mã đơn</th>
+                    <th scope="col">Người nhận</th>
+                    <th scope="col">Địa chỉ</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tổng đơn</th>
+                    <th scope="col">Hình thức thanh toán</th>
+                    <th scope="col">Trạng thái</th>
                 </tr>
             </thead>
             <tbody>
-                <?php
-if (isset($result_of_all_category)) {
-    $i = 0;
-    foreach ($result_of_all_category as $value) {
+                <?php if (isset($result_of_all_orders)) {
+    foreach ($result_of_all_orders as $value) {
         ?>
                 <tr>
-                    <td><?php echo $value['category_name']; ?></td>
-                    <td>
-                        <a
-                            href="edit_category.php?id_of_category_edit_category=<?php echo $value['id']; ?>&current_category_name=<?php echo $value['category_name']; ?>"><button
-                                class="btn btn-info">Sửa</button></a>
-
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop<?php if (isset($i)) {echo $i;}?>">Xóa</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop<?php if (isset($i)) {echo $i;}?>"
-                            data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                            aria-labelledby="staticBackdropLabel<?php if (isset($i)) {echo $i;}?>" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5"
-                                            id="staticBackdropLabel<?php if (isset($i)) {echo $i;}?>">Xóa loại sách
-                                        </h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Xác nhận thay đổi loại sách
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Hủy</button>
-                                        <button type="button" class="btn btn-primary"><a
-                                                href="?delete_category&id_of_category=<?php echo $value['id']; ?>"
-                                                style="text-decoration: none; color: #fff;">Đồng ý</a></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <td><a style="text-decoration: none;"
+                            href="detail_order.php?id_of_order=<?php echo $value['id']; ?>&status_of_order=<?php echo $value['status']; ?>">#<?php echo $value['id']; ?></a>
                     </td>
+                    <td>
+                        <p><?php echo $value['full_name']; ?></p>
+                        <p><?php echo $value['phone_number']; ?></p>
+                    </td>
+                    <td><?php echo $value['address']; ?></td>
+                    <td><?php echo $value['email']; ?></td>
+                    <td><?php echo number_format($value['total'], 0, ",", ".") . "đ"; ?></td>
+                    <td><?php echo $value['payment']; ?></td>
+                    <td><?php echo $value['status']; ?></td>
                 </tr>
-                <?php $i++;}}?>
+                <?php }}?>
             </tbody>
         </table>
     </main>

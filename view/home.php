@@ -53,18 +53,6 @@ a {
     </div>
 
     <div class="container mt-4">
-        <div class="row">
-            <div class="col-6 banner_info_relative_home">
-                <a href="../public/index.php?action=list_book&id_of_category=1"> <img class="w-100"
-                        src="../view/img/home/img-right.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-6 banner_info_relative_home">
-                <a href="../public/index.php?action=list_book&id_of_category=all"> <img class="w-100"
-                        src="../view/img/home/img-left.jpg" alt="">
-                </a>
-            </div>
-        </div>
         <div class="container mt-5">
             <h4 class="title-home mt-2"><span>SÁCH MỚI</span></h4>
             <div class="row mt-4" id="new_book_home">

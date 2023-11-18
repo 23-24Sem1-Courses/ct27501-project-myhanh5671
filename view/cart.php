@@ -1,7 +1,6 @@
 <!-- done -->
 <title>Giỏ hàng</title>
 <div id="breadcrumb_background">
-    <p id="title_breadcrumb">GIỎ HÀNG</p>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
@@ -111,20 +110,16 @@
                 <textarea class="form-control" name="note_customer_cart" id="note_customer_cart" rows="3"></textarea>
             </div>
             <div class="mb-3">
-                <label for="payments_of_customer_cart" class="form-label">Hình thức thanh toán*</label>
-                <select id="payments_of_customer_cart" class="custom-select custom-select-md mb-3"
-                    name="payments_of_customer_cart" required>
-                    <option value="Thanh toán tiền mặt khi nhận hàng (COD)" selected>Thanh toán khi nhận hàng (COD)
-                    </option>
-                    <option value="Thanh toán qua thẻ tín dụng">Thanh toán qua thẻ tín dụng</option>
-
-                </select>
+                <label for="payments_of_customer_cart" class="form-label">Hình thức thanh toán:</label>
+                <input type="text" id="payments_of_customer_cart" class="form-control border-0"
+                    name="payments_of_customer_cart" value="Thanh toán khi nhận hàng (COD)" readonly>
             </div>
             <input type="hidden" name="total_cart_value" value="<?php echo $total_cart_value; ?>">
-            <button type="submit" class="btn btn-primary" id="btn_agree_order_cart" name="btn_agree_order_cart">Đồng ý
-                đặt hàng</button>
-            <button class="btn btn-warning"><a style="text-decoration: none;" href="?action=home">Tiếp tục mua
-                    hàng</a></button>
+            <button type="submit" class="btn btn-primary" id="btn_agree_order_cart" name="btn_agree_order_cart">
+                Đồng ý đặt hàng</button>
+            <button class="btn btn-warning"><a style="text-decoration: none;" href="?action=home">
+                    Tiếp tục mua hàng</a>
+            </button>
         </form>
         <div class="col-lg"></div>
     </div>

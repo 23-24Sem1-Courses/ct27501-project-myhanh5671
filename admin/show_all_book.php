@@ -69,19 +69,17 @@ if (isset($_GET['update_success'])) {
             <p class="text-center">Tất cả sách ở đây</p>
         </div>
 
-        <div>
-            <button id="btn_collapse_show_all_book" class="btn btn-danger" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fas fa-th-list"></i>
-            </button>
+        <!-- <div class="row mt-3">
+            <a href="show_all_category.php"><button class="btn " id="btn_add_new_book_show_all_book">
+                Quản lý danh mục sách
+                </button></a>
+        </div> -->
+
+        <div class="row mt-3">
+            <a href="show_all_order.php"><button class="btn " id="btn_add_new_book_show_all_book">Quản lý đơn
+                    hàng</button></a>
         </div>
-        <div class="collapse mt-2" id="collapseExample">
-            <div class="card card-body" style="width: 18rem;" id="card_body_show_all_book">
-                <!-- <a href="">Quản lý tài khoản</a> -->
-                <a href="show_all_order.php">Quản lý đơn hàng</a>
-                <a href="show_all_category.php">Quản lý danh mục sách</a>
-            </div>
-        </div>
+
 
         <div class="row mt-3">
             <a href="add.php"><button class="btn" id="btn_add_new_book_show_all_book">Thêm sách
