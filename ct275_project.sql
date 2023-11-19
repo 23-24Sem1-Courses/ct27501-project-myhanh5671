@@ -3,13 +3,17 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 16, 2023 lúc 10:10 AM
+-- Thời gian đã tạo: Th10 19, 2023 lúc 07:50 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
+
+use ct275_project;
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -41,7 +45,8 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`id`, `full_name`, `email`, `phone_number`, `pass_word`) VALUES
 (5, 'Admin', 'admin@gmail.com', '0966899548', '$2a$10$ChYX06lnvA02/xHdu15FPeCe/mFiWBnVQmCAmwDAKZXBq0mzg/xES'),
-(14, 'Nguyễn Khánh', 'nguyenngockhanhvthg@gmail.com', '0348144669', '$2y$10$1jwAysd1HE9Vv9VfqKGPBOMT5Ge5PYG3p04/WBZx0SRtsiYXRVAN6');
+(14, 'Nguyễn Khánh', 'nguyenngockhanhvthg@gmail.com', '0348144669', '$2y$10$1jwAysd1HE9Vv9VfqKGPBOMT5Ge5PYG3p04/WBZx0SRtsiYXRVAN6'),
+(15, 'Nguyễn Ngọc Khánh', 'nguyenngoc@gmail.com', '0348144678', '$2y$10$XMxz0RL7Q9ZHPvT.aQ1ZBu.ev9WDNmvDT9tENwqifn5c6b7t5LwO6');
 
 -- --------------------------------------------------------
 
@@ -108,7 +113,8 @@ INSERT INTO `book` (`id`, `book_name`, `price`, `category_id`, `description`, `a
 (114, 'THÁM TỬ LỪNG DANH CONAN - 15 PHÚT TRẦM MẶC ', 45000, 1, 'Đường tàu điện ngầm vừa được thị trưởng Asakura cắt băng khánh thành bị đánh bom! Hung thủ phải chăng là kẻ ôm mối hiềm khích với ngài thị trưởng? Các manh mối dẫn tới đập thủy điện được xây dựng trong thời gian ngài giữ cương vị bộ trưởng Bộ Tài nguyên Đất, Cơ sở hạ tầng, Giao thông Vận tải và Du lịch.\r\nConan ghé thăm ngôi làng tái định cư của những người dân phải rời đi khi nơi chôn nhau cắt rốn của họ chìm xuống đáy đập. Hôm sau, Toma – cậu thiếu niên đã hôn mê tám năm sau một vụ tai nạn – đột ngột tỉnh lại. Liệu biến cố xảy ra với Toma và vụ nổ đường tàu điện ngầm có mối liên hệ nào không? ', 'Gosho Aoyama  Shima Mizuki Kaz', 'NXB Kim Đồng', 'conna.jpg'),
 (115, 'CÔ BÉ NỌ CÓ MỘT CON GẤU', 50000, 2, 'Hóm hỉnh, kì bí và đậm chất phiêu lưu, mười một truyện cổ tích lấy bối cảnh nước Mĩ thế kỉ XIX của bậc thầy sáng tạo L. Frank Baum sẽ dẫn các bạn tới một thế giới li kì chưa từng thấy. Các bạn hãy thật nhanh trí, tinh ý ghi nhớ bài học sau mỗi truyện nhé! \r\n\"Đừng nên tìm sự thật sau cùng của những điều bạn chẳng thể thấu hiểu. Bởi thế gian này chẳng phải luôn là dấu hỏi lớn đó sao.\" - L. Frank Baum \r\n---\r\nL. FRANK BAUM (1856 – 1919) \r\nNhà văn, diễn viên, nhà làm phim nổi tiếng người Mĩ. \r\nÔng là tác giả của bộ truyện gồm 14 cuốn về xứ Oz, tiêu biểu nhất là tập sách Phù thủy xứ Oz. Đây cũng là bộ truyện thiếu nhi được yêu thích nhất ở Mĩ suốt hơn 100 năm qua. Trong sự nghiệp sáng tác, ông đã viết 55 tiểu thuyết, 83 truyện ngắn, hơn 200 bài thơ cùng nhiều bản thảo chưa từng được công bố.', 'L. Frank Baum', 'NXB Kim Đồng', 'cobe.webp'),
 (116, 'CHIẾN ĐẠO - LÀM CHỦ TƯƠNG LAI & KIẾN TẠO SỰ NGHIỆP ', 88000, 15, '“Chiến đạo” là chiến đấu với chính mình trên đường đời với tinh thần của một chiến binh để vượt thoát khỏi những hạn chế của bản thân hay những ràng buộc của hoàn cảnh. Kết quả của cuộc chiến là những lựa chọn, những quyết định, những hành động sẽ làm nên ta mỗi ngày, là làm chủ tương lai, kiến tạo sự nghiệp. — Tác giả Đỗ Thuỳ Dương\r\n', 'Đỗ Thùy Dương', 'NXB Kim Đồng', 'chiendao.jpg'),
-(117, 'NHỮNG TIA NẮNG ĐẦU TIÊN', 57000, 2, 'Những tia nắng đầu tiên trình bày buổi bình minh trong tâm hồn một thế hệ thiếu nhi Việt Nam vốn có truyền thống hiếu học và nhân hậu nay đang vươn lên một cõi văn hóa mới.\r\n“Cuốn sách của tình người, tình bạn của những thiếu niên khi mới chạm đến ngưỡng cửa tuổi xuân. Cách thể hiện tình cảm kín đáo càng nổi bật lên nội tâm nồng cháy của các nhân vật tràn đầy niềm tự tin với đất nước, với dân tộc, với lẽ phải và chính bản thân mình.” - Nhà phê bình văn học Vân Thanh', 'Lê Phương Liên', 'NXB Kim Đồng', 'tia.jpg');
+(117, 'NHỮNG TIA NẮNG ĐẦU TIÊN', 57000, 2, 'Những tia nắng đầu tiên trình bày buổi bình minh trong tâm hồn một thế hệ thiếu nhi Việt Nam vốn có truyền thống hiếu học và nhân hậu nay đang vươn lên một cõi văn hóa mới.\r\n“Cuốn sách của tình người, tình bạn của những thiếu niên khi mới chạm đến ngưỡng cửa tuổi xuân. Cách thể hiện tình cảm kín đáo càng nổi bật lên nội tâm nồng cháy của các nhân vật tràn đầy niềm tự tin với đất nước, với dân tộc, với lẽ phải và chính bản thân mình.” - Nhà phê bình văn học Vân Thanh', 'Lê Phương Liên', 'NXB Kim Đồng', 'tia.jpg'),
+(118, 'ĐẤT RỪNG PHƯƠNG NAM', 72900, 2, 'Nhà văn Đoàn Giỏi (1925 - 1989)\r\nÔng không phải là con cá lớn, nhưng cũng không phải là con cá con, ông là con cá lạ. Chưa có nhà văn nào nói về thiên nhiên Nam Bộ được như ông. Nhân vật chính của ông là thiên nhiên và loài vật chứ không phải loài người. Ông là người đầu tiên kể chuyện kinh dị về thiên nhiên Nam Bộ. Dưới ngòi bút của ông mọi chuyện đều trở nên lạ lùng.\r\n“Càng về sau này, Đất rừng phương Nam càng tỏ ra có vị trí vững chắc trong số các quyển sách hay nhất viết về thiếu nhi của nước ta. Và những người lớn đọc nó vẫn vô cùng thích thú.\r\n... Với một đời văn trên bốn mươi năm, anh đã kịp để lại cho đời những dòng đẹp đẽ đậm sắc thái và đầy sinh thú về quê hương, đất nước, và con người vùng Nam Bộ thân yêu của Tổ quốc ta.”', 'Đoàn Giỏi', 'NXB Kim Đồng', 'datrung.jpg');
 
 -- --------------------------------------------------------
 
@@ -152,11 +158,9 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `full_name`, `address`, `phone_number`, `email`, `total`, `payment`, `status`) VALUES
-(49, 'Nguyễn Khánh', '1233 556 fgg hhhj  t5ntn', '0348144669', 'nguyenngockhanhvthg@gmail.com', 66000, 'Thanh toán qua thẻ tín dụng', 'Đang xử lý'),
-(50, 'Nguyễn Khánh', '12345 tj6j ti5it  tj5t', '0348144669', 'nguyenngockhanhvthg@gmail.com', 146700, 'Thanh toán qua thẻ tín dụng', 'Đang xử lý'),
 (51, 'Nguyễn Khánh', 'Mậu Thân, Ninh Kiều, Cần Thơ', '0348144669', 'nguyenngockhanhvthg@gmail.com', 224400, 'Thanh toán tiền mặt khi nhận hàng (COD)', 'Đang xử lý'),
-(52, 'Nguyễn Khánh', 'Mậu Thân, Ninh Kiều, Cần Thơ', '0348144669', 'nguyenngockhanhvthg@gmail.com', 109200, 'Thanh toán tiền mặt khi nhận hàng (COD)', 'Đang xử lý');
-
+(52, 'Nguyễn Khánh', 'Mậu Thân, Ninh Kiều, Cần Thơ', '0348144669', 'nguyenngockhanhvthg@gmail.com', 109200, 'Thanh toán tiền mặt khi nhận hàng (COD)', 'Đã hủy'),
+(53, 'Nguyễn Khánh', 'Mậu Thân, Ninh Kiều, Cần Thơ', '0348144669', 'nguyenngockhanhvthg@gmail.com', 87000, 'Thanh toán khi nhận hàng (COD)', 'Đang xử lý');
 -- --------------------------------------------------------
 
 --
@@ -183,7 +187,14 @@ INSERT INTO `order_detail` (`id`, `book_name`, `book_img`, `price`, `amount`, `t
 (94, 'Số Đỏ', 'so-do.jpg', 37500, 1, 37500, 50),
 (95, 'Chú Thuật Hồi Chiến - Tập Đặc Biệt', 'ck me.jpg', 79200, 2, 158400, 51),
 (96, 'Nhóc Maruto - TẬP 3', 'nhóc.jpg', 36000, 1, 36000, 51),
-(97, 'Chú Thuật Hồi Chiến - Tập Đặc Biệt', 'ck me.jpg', 79200, 1, 79200, 52);
+(97, 'Chú Thuật Hồi Chiến - Tập Đặc Biệt', 'ck me.jpg', 79200, 1, 79200, 52),
+(98, 'NHỮNG TIA NẮNG ĐẦU TIÊN', 'tia.jpg', 57000, 1, 57000, 53),
+(99, 'ĐẤT RỪNG PHƯƠNG NAM', 'datrung.jpg', 72900, 1, 72900, 54),
+(100, 'Mashle - Tập 9', 'mas2.jpg', 27000, 2, 54000, 55),
+(101, 'Mashle - Tập 9', 'mas2.jpg', 27000, 2, 54000, 56),
+(102, 'Mashle - Tập 9', 'mas2.jpg', 27000, 2, 54000, 57),
+(103, 'TIỂU THUYẾT ONE PIECE - CHUYỆN CHƯA KỂ VỀ BĂNG MŨ RƠM', 'one2.jpg', 43200, 1, 43200, 58),
+(104, 'Nguyên Lý Marketing', 'mar.jpg', 799000, 1, 799000, 59);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -229,13 +240,13 @@ ALTER TABLE `order_detail`
 -- AUTO_INCREMENT cho bảng `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT cho bảng `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT cho bảng `category`
@@ -247,13 +258,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT cho bảng `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -264,12 +275,6 @@ ALTER TABLE `order_detail`
 --
 ALTER TABLE `book`
   ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
-
---
--- Các ràng buộc cho bảng `order_detail`
---
-ALTER TABLE `order_detail`
-  ADD CONSTRAINT `order_detail_ibfk_1` FOREIGN KEY (`id_orders`) REFERENCES `orders` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

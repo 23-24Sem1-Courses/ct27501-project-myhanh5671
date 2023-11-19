@@ -18,8 +18,7 @@
         <strong>Danh Mục Sách Đa Dạng:</strong>
         HK Book Store cung cấp một loạt các thể loại sách bao gồm sách Văn học, Truyẹn tranh comic, sách kinh tế, nghệ
         thuật,
-        và nhiều thể loại khác. Điều này giúp đáp ứng đa dạng nhu cầu đọc sách của người đọc.
-    </p>
+        và nhiều thể loại khác. Điều này giúp đáp ứng đa dạng nhu cầu đọc sách của đọc giả.
     <p> <strong>Mua Sắm Trực Tuyến:</strong>
 
         Với HK Book Store, bạn có thể thoải mái mua sắm sách từ nhà mình thông qua trang web của cửa hàng. Quá trình đặt

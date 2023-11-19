@@ -145,14 +145,11 @@ if (isset($_GET['action'])) {
             include '../view/detail_order.php';
             break;
         default:
-            //Bắt đầu tạo quotes ngẫu nhiên
             include '../view/home.php';
             break;
     }
-} else {
-    //Bắt đầu tạo quotes ngẫu nhiên
-    require '../vendor/autoload.php';
 
+} else {
     include '../view/home.php';
 }
 

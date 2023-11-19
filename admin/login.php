@@ -53,11 +53,11 @@ if ($status_login_admin == 'no') {
                 <form class="col" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <!-- bổ sung action -->
                     <div class="mb-3">
-                        <label for="user_login" class="form-label">User*</label>
+                        <label for="user_login" class="form-label">Email:</label>
                         <input type="text" name="user_login" class="form-control" id="user_login">
                     </div>
                     <div class="mb-3">
-                        <label for="password_login" class="form-label">Mật khẩu*</label>
+                        <label for="password_login" class="form-label">Mật khẩu:</label>
                         <input type="password" name="password_login" class="form-control" id="password_login">
                     </div>
                     <button type="submit" name="btn_login" class="btn btn-primary">Submit</button>
