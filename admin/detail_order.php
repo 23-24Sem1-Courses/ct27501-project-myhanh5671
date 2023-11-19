@@ -67,7 +67,7 @@ if (isset($_GET['btn_update_status_detail_order']) && isset($_GET['id_of_order']
         </div>
 
         <div class="row">
-            <a href="show_all_order.php"><button>Quay lại</button></a>
+            <a href="show_all_order.php"><button class="btn btn-warning">Quay lại</button></a>
         </div>
 
         <!-- Table chi tiết đơn hàng -->
@@ -114,7 +114,7 @@ if (isset($result_of_detail_order)) {
             </select>
             <input type="hidden" name="id_of_order"
                 value="<?php if (isset($_GET['id_of_order'])) {echo $_GET['id_of_order'];}?>">
-            <button type="submit" name="btn_update_status_detail_order">Cập nhật</button>
+            <button type="submit" name="btn_update_status_detail_order" class="btn btn btn-primary">Cập nhật</button>
         </form>
     </main>
     <!-- footer dùng chung -->
