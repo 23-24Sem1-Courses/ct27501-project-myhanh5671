@@ -1,7 +1,15 @@
 <!-- done -->
 <title>Đăng nhập</title>
+<style>
+#breadcrumb_background {
+    background-size: cover;
+    width: 100%;
+    margin: 30px 110px;
+    display: contents;
+}
+</style>
 <div id="breadcrumb_background">
-    <p id="title_breadcrumb" class="text-center">ĐĂNG NHẬP</p>
+    <p id="title_breadcrumb" class="text-center text-dark mt-2">ĐĂNG NHẬP</p>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-center">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
