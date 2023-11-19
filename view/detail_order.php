@@ -1,6 +1,6 @@
 <title>Chi tiết đơn hàng</title>
 <div id="breadcrumb_background">
-    <p id="title_breadcrumb">CHI TIẾT ĐƠN HÀNG</p>
+    <p id="title_breadcrumb" class="text-dark">CHI TIẾT ĐƠN HÀNG</p>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
