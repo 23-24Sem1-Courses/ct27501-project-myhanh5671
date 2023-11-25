@@ -110,26 +110,6 @@ function login_admin()
     return $login_status;
 }
 
-//hàm lấy thông tin của 1 sản phẩm cụ thể
-function get_data_book_from_db($id_of_book)
-{
-    include PATH_TO_CONNECT_DB;
-    $sql = "select * from book where id=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$id_of_book]);
-    $result = $stmt->fetch();
-    return $result;
-}
-
-//Hàm cập nhật thông tin sản phẩm
-function update_data_book($book_name, $price, $category_id, $description, $author, $nxb, $id_of_book)
-{
-    include PATH_TO_CONNECT_DB;
-    $sql = "update book set book_name=?, price=?, category_id=?, description=?, author=?, nxb=? where id=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$book_name, $price, $category_id, $description, $author, $nxb, $id_of_book]);
-}
-
 //Hàm lấy tất cả thông tin đơn hàng
 function get_all_order()
 {
@@ -142,28 +122,6 @@ function get_all_order()
     return $result_of_all_orders;
 }
 
-//Hàm lấy thông tin chi tiết đơn hàng
-function get_detail_order($id_of_order)
-{
-    include PATH_TO_CONNECT_DB;
-    $sql = "select * from order_detail where id_orders=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$id_of_order]);
-
-    $result_of_detail_order = $stmt->fetchAll();
-    return $result_of_detail_order;
-}
-
-//Hàm cập nhật trạng thái đơn hàng
-function update_order_status($id_of_order, $status)
-{
-    include PATH_TO_CONNECT_DB;
-    $sql = "update orders set status=? where id=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$status, $id_of_order]);
-
-}
-
 //Hàm kiểm tra xem tên sản phẩm muốn thêm có trùng không
 function check_name_category($name_category_add_category)
 {
@@ -173,15 +131,6 @@ function check_name_category($name_category_add_category)
     $stmt = $conn->prepare($sql);
     $stmt->execute([$name_category_add_category]);
     return $stmt->rowCount();
-}
-
-//hàm cập nhật tên loại sản phẩm
-function update_category_name($id_of_category, $name_of_category)
-{
-    include PATH_TO_CONNECT_DB;
-    $sql = "update category set category_name=? where id=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$name_of_category, $id_of_category]);
 }
 
 //Hàm xóa sản phẩm (xóa cả thông tin và ảnh)
@@ -196,13 +145,4 @@ function delete_book_of_a_category($id_of_category)
     foreach ($result as $value) {
         delete_book($value['id']);
     }
-}
-
-//Hàm xóa loại sản phẩm
-function delete_category($id_of_category)
-{
-    include PATH_TO_CONNECT_DB;
-    $sql = "delete from category where id=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$id_of_category]);
 }

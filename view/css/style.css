@@ -9,8 +9,8 @@ header {
 }
 
 #logo_header {
-  height : 80px;
-  margin : 0 auto;
+  height: 80px;
+  margin: 0 auto;
   display: block;
 }
 
@@ -20,34 +20,33 @@ header {
 
 #search_input_header {
   display: inline-block;
-  width  : 300px;
-
+  width: 300px;
 }
 
 #search_btn_header {
   background-color: #b81b21;
-  color           : white;
+  color: white;
 }
 
 #icon_user_header {
-  padding : 0 15px;
+  padding: 0 15px;
   position: relative;
 }
 
 #login_register_header {
-  display         : none;
-  position        : absolute;
-  border          : 1px solid black;
-  padding         : 10px 30px 10px 15px;
-  width           : 150px;
-  left            : -2px;
-  top             : 24px;
-  z-index         : 999;
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+  padding: 10px 30px 10px 15px;
+  width: 150px;
+  left: -2px;
+  top: 24px;
+  z-index: 999;
   background-color: #fff;
 }
 
 #icon_user:hover {
-  color : #ffe020;
+  color: #ffe020;
   cursor: pointer;
 }
 
@@ -61,11 +60,11 @@ header {
 
 #login_register_header a {
   text-decoration: none;
-  color          : black;
+  color: black;
 }
 
 #icon_shopping_bag_header {
-  padding : 0 12px;
+  padding: 0 12px;
   position: relative;
 }
 
@@ -82,23 +81,23 @@ header {
 }
 
 #count_book_header {
-  position        : absolute;
-  top             : -6px;
-  right           : -3px;
+  position: absolute;
+  top: -6px;
+  right: -3px;
   background-color: #b81b21;
-  border-radius   : 50%;
-  display         : inline-block;
-  width           : 19px;
-  text-align      : center;
-  font-size       : 12px;
-  color           : #fff;
+  border-radius: 50%;
+  display: inline-block;
+  width: 19px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
 }
 
 /* ------------------------------------- */
 /* Nav */
 #cover_nav {
   background-color: #bc1c22;
-  margin-top      : 15px;
+  margin-top: 15px;
 }
 
 #btn_toogle {
@@ -112,28 +111,27 @@ header {
 /* ------------------------------------- */
 /* Breadcrumb */
 #breadcrumb_background {
-  background-size : cover;
-  width           : 100%;
+  background-size: cover;
+  width: 100%;
   margin: 30px 110px;
-
 }
 
 #title_breadcrumb {
   font-weight: 800;
-  color      : #000000;
-  font-size  : 25px;
+  color: #000000;
+  font-size: 25px;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item + .breadcrumb-item::before {
   content: "/" !important;
-  color  : black;
+  color: black;
 }
 
 #breadcrumb_background a {
-  color          : black;
+  color: black;
   text-decoration: none;
-  font-size      : 16px;
-  font-weight    : 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 #breadcrumb_background a:hover {
@@ -148,14 +146,14 @@ header {
 
 .banner_info_absolute_home {
   position: absolute;
-  top     : 80px;
-  left    : 50px;
+  top: 80px;
+  left: 50px;
 }
 
 .banner_info_absolute_home p {
-  color      : #fff;
+  color: #fff;
   font-weight: 600;
-  font-size  : 15px;
+  font-size: 15px;
 }
 
 .banner_info_absolute_home a {
@@ -164,79 +162,78 @@ header {
 
 .title_section_home {
   font-weight: 800;
-  color      : black;
-  font-size  : 30px;
+  color: black;
+  font-size: 30px;
 }
 
 .title_section_home span {
   position: relative;
 }
 
-
 .featured_books_item_home img {
-  width  : 70%;
-  margin : 0 auto;
+  width: 70%;
+  margin: 0 auto;
   display: block;
 }
 
 .name_of_featured_books_home {
   text-decoration: none;
-  color          : black;
-  font-weight    : 600;
+  color: black;
+  font-weight: 600;
 }
 
 #img_flash_sale_home {
-  width : 90%;
+  width: 90%;
   margin: 0 auto;
 }
 
 #countdown_timer_flash_sale_home span {
-  width           : 70px;
-  margin-right    : 25px;
+  width: 70px;
+  margin-right: 25px;
   background-color: #ffe020;
-  font-size       : 25px;
+  font-size: 25px;
 }
 
 #buy_btn_flash_sale_home {
-  width : 150px;
+  width: 150px;
   height: 50px;
   border: 1px solid #ffe020;
 }
 
 #buy_btn_flash_sale_home a {
   text-decoration: none;
-  color          : #ffe020;
+  color: #ffe020;
 }
 
 .new_book_item_home img {
-  width  : 80%;
-  margin : 0 auto;
+  width: 80%;
+  margin: 0 auto;
   display: block;
 }
 
 .name_of_new_book_home {
   text-decoration: none;
-  font-weight    : 600;
-  color          : black;
+  font-weight: 600;
+  color: black;
 }
 
 /* ------------------------------------- */
 /* book */
 #title_book {
-  font-size  : 24px;
+  font-size: 24px;
   font-weight: 600;
-  margin     : 15px 0;
+  margin: 15px 0;
 }
 
 .list_item_book img {
-  width  : 80%;
-  margin : 0 auto;
+  width: 80%;
+  margin: 0 auto;
   display: block;
 }
 
 .list_item_book a {
   text-decoration: none;
-  color          : black;
+  color: black;
 }
 
 .list_item_book a:hover {
@@ -244,27 +241,25 @@ header {
 }
 
 .list_item_book p {
-  color      : black;
-  font-size  : 20px;
+  color: black;
+  font-size: 20px;
   font-weight: 600;
 }
 
 /* ------------------------------------- */
 /* Detail book */
 #img_detail_book {
-  width  : 80%;
-  height : unset;
+  width: 80%;
+  height: unset;
   display: block;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
-
-
 #brand_of_detail_book {
-  font-size    : 12px;
-  font-weight  : 600;
+  font-size: 12px;
+  font-weight: 600;
   margin-bottom: 5px;
-  margin-top   : 15px;
+  margin-top: 15px;
 }
 /* #price_of_detail_book {
   background-color: #b81b21 !important;
@@ -277,8 +272,6 @@ header {
   font-size  : 30px;
 } */
 
-
-
 /* ------------------------------------- */
 /* Cart */
 #thead_cart {
@@ -286,54 +279,54 @@ header {
 }
 
 #tbody_cart img {
-  width : 110px;
+  width: 110px;
   height: auto;
 }
 
 #div_tag_cover_table_cart {
-  border : 2px solid black;
+  border: 2px solid black;
   padding: 10px;
 }
 
 #btn_change_quantity_cart {
-  border       : 1px solid #333;
-  height       : 30px;
-  width        : 80px;
-  margin       : 0 auto;
-  color        : black;
+  border: 1px solid #333;
+  height: 30px;
+  width: 80px;
+  margin: 0 auto;
+  color: black;
   border-radius: 2px;
 }
 
 #btn_change_quantity_cart a {
   text-decoration: none;
-  font-size      : 25px;
-  color          : #ffe020;
+  font-size: 25px;
+  color: #ffe020;
 }
 
 /* ------------------------------------- */
 /* Đặt hàng thành công (order success) */
 #info_customer_order_success {
-  border : 2px solid #dadada;
+  border: 2px solid #dadada;
   padding: 15px 15px;
 }
 
 #card_body_order_success img {
-  width        : 50px;
-  height       : 50px;
+  width: 50px;
+  height: 50px;
   border-radius: 5px;
 }
 
 /* ------------------------------------- */
 /* Search book */
 .list_item_search_book img {
-  width  : 80%;
-  margin : 0 auto;
+  width: 80%;
+  margin: 0 auto;
   display: block;
 }
 
 .list_item_search_book a {
   text-decoration: none;
-  color          : black;
+  color: black;
 }
 
 .list_item_search_book a:hover {
@@ -341,27 +334,27 @@ header {
 }
 
 .list_item_search_book p {
-  color      : #ffe020;
-  font-size  : 20px;
+  color: #ffe020;
+  font-size: 20px;
   font-weight: 600;
 }
 
 /* ------------------------------------- */
 /* About */
 #title_about {
-  font-weight   : 700;
-  border-bottom : 3px solid #bc1c22;
+  font-weight: 700;
+  border-bottom: 3px solid #bc1c22;
   padding-bottom: 10px;
-  margin-bottom : 30px;
+  margin-bottom: 30px;
 }
 
 /* ------------------------------------- */
 /* News */
 #title_news {
-  font-weight   : 700;
-  border-bottom : 2px solid #ffe020;
+  font-weight: 700;
+  border-bottom: 2px solid #ffe020;
   padding-bottom: 10px;
-  margin-bottom : 30px;
+  margin-bottom: 30px;
 }
 
 #big_news {
@@ -374,9 +367,9 @@ header {
 
 #big_illustration_news,
 .illustration_news {
-  max-width : 100%;
+  max-width: 100%;
   max-height: 100%;
-  width     : auto;
+  width: auto;
 }
 
 .illustration_news {
@@ -385,9 +378,9 @@ header {
 
 .link_news {
   text-decoration: none;
-  font-size      : 18px;
-  font-weight    : 800;
-  color          : black;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
 }
 
 .link_news:hover {
@@ -395,11 +388,11 @@ header {
 }
 
 .watch_news {
-  padding         : 5px;
+  padding: 5px;
   background-color: #ffe020;
-  color           : #fff;
-  font-size       : 14px;
-  font-weight     : 700;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .summary_content_news {
@@ -415,8 +408,8 @@ header {
 #news5 img,
 #news6 img,
 #news7 img {
-  width  : 55%;
-  margin : 30px auto;
+  width: 55%;
+  margin: 30px auto;
   display: block;
 }
 
@@ -435,28 +428,28 @@ header {
 }
 
 .div_contain_icon_contact i {
-  width           : 40px;
+  width: 40px;
   background-color: #ffe020;
-  height          : 40px;
-  text-align      : center;
-  border-radius   : 50%;
-  padding-top     : 12px;
-  color           : #fff;
-  margin-right    : 20px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 12px;
+  color: #fff;
+  margin-right: 20px;
 }
 
 /* ------------------------------------- */
 /* Login */
 #title_login,
 #title_register {
-  font-weight   : 700;
-  border-bottom : 2px solid #ffe020;
+  font-weight: 700;
+  border-bottom: 2px solid #ffe020;
   padding-bottom: 10px;
-  margin-bottom : 30px;
+  margin-bottom: 30px;
 }
 
 #form_login {
-  padding   : 20px;
+  padding: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -484,31 +477,31 @@ header {
 /* Account info */
 #nav_account_info {
   background-color: #f1f1f1;
-  padding         : 30px;
+  padding: 30px;
 }
 
-#nav_account_info>a {
+#nav_account_info > a {
   text-decoration: none;
-  color          : #ffe020;
+  color: #ffe020;
 }
 
 #info_account_info,
 #change_account_info {
-  padding         : 30px;
+  padding: 30px;
   background-color: #f1f1f1;
   border: 1px solid #d1e7dd;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
-#info_account_info>h3,
-#change_account_info>h3,
-#change_password>h3 {
+#info_account_info > h3,
+#change_account_info > h3,
+#change_password > h3 {
   color: #ffe020;
 }
 
 #agree_cancel_order_account_info {
   text-decoration: none;
-  color          : #fff;
+  color: #fff;
 }
 
 /* ------------------------------------- */
@@ -517,10 +510,10 @@ header {
 /* ------------------------------------- */
 /* Change password */
 #btn_change_password {
-  padding         : 10px;
+  padding: 10px;
   background-color: #ffe020;
-  border-radius   : 5px;
-  border          : 0px;
+  border-radius: 5px;
+  border: 0px;
 }
 
 #btn_change_password:hover {
@@ -530,20 +523,20 @@ header {
 /* ------------------------------------- */
 /* Detail Order */
 #btn_back_detail_order {
-  color           : #fff;
+  color: #fff;
   background-color: #ffe020;
-  border-radius   : 6px;
-  padding         : 5px 10px;
-  border          : 2px solid black;
+  border-radius: 6px;
+  padding: 5px 10px;
+  border: 2px solid black;
 }
 
 /* ------------------------------------- */
 /* Footer */
 #top_footer {
   background-color: #f5f5f5;
-  padding         : 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   /* the distance between footer and main here */
-  margin-top      : 35px;
+  margin-top: 35px;
 }
 
 footer {
@@ -556,7 +549,7 @@ footer {
 
 #describe_footer img {
   height: auto;
-  width : 100%;
+  width: 100%;
   margin: 5px auto 20px auto;
 }
 
@@ -567,16 +560,16 @@ footer {
 }
 
 #main_footer {
-  background : white;
-  color      : #f5f5f5;
+  background: white;
+  color: #f5f5f5;
   padding-top: 30px;
-  font-size  : 14px;
+  font-size: 14px;
 }
 
 .main_footer_title {
   font-weight: 600;
-  color      : #bc1d23;
-  font-size  : 16px;
+  color: #bc1d23;
+  font-size: 16px;
 }
 
 #social_network a {
@@ -589,8 +582,8 @@ footer {
 
 #copyright_footer {
   background-color: #ffe020;
-  padding         : 15px 0;
-  height          : 57px;
+  padding: 15px 0;
+  height: 57px;
 }
 
 /* css cho ảnh khi hover */

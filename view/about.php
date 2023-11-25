@@ -4,14 +4,13 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
-            <li class="breadcrumb-item active" aria-current="page"
-                style="color: #ffe020; font-weight: 600; font-size: 16px;">&nbsp;Giới thiệu</li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #ffe020; font-weight: 600; font-size: 16px;">&nbsp;Giới thiệu</li>
         </ol>
     </nav>
 </div>
 <main class="container">
     <h3 id="title_about">GIỚI THIỆU</h3>
-    <p>HK Book Store là một cửa hàng sách trực tuyến nơi bạn có thể
+    <p>HK Book Storelà một cửa hàng sách trực tuyến nơi bạn có thể
         khám phá và mua sắm các loại sách đa dạng từ các thể loại khác nhau .
     </p>
     <p>

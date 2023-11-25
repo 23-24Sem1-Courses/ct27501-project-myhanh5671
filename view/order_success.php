@@ -15,38 +15,38 @@
                     <div class="col-md-6 mb-3">
                         <h4>Thông tin khách hàng</h4>
                         <p><?php if (isset($_POST['fullname_customer_cart'])) {
-    echo $_POST['fullname_customer_cart'];
-}
-?>
+                                echo $_POST['fullname_customer_cart'];
+                            }
+                            ?>
                         </p>
                         <p><?php if (isset($_POST['email_customer_cart'])) {
-    echo $_POST['email_customer_cart'];
-}
-?></p>
+                                echo $_POST['email_customer_cart'];
+                            }
+                            ?></p>
                         <p><?php if (isset($_POST['phone_number_customer_cart'])) {
-    echo $_POST['phone_number_customer_cart'];
-}
-?>
+                                echo $_POST['phone_number_customer_cart'];
+                            }
+                            ?>
                         </p>
                     </div>
                     <div class="col-md-6 mb-3">
                         <h4>Địa chỉ nhận hàng</h4>
                         <p><?php if (isset($_POST['address_customer_cart'])) {
-    echo $_POST['address_customer_cart'];
-}
-?></p>
+                                echo $_POST['address_customer_cart'];
+                            }
+                            ?></p>
                         <p>Ghi chú: <?php if (isset($_POST['note_customer_cart'])) {
-    echo $_POST['note_customer_cart'];
-}
-?>
+                                        echo $_POST['note_customer_cart'];
+                                    }
+                                    ?>
                         </p>
                     </div>
                     <div class="col-md-6 mb-3">
                         <h4>Phương thức thanh toán</h4>
                         <p><?php if (isset($_POST['payments_of_customer_cart'])) {
-    echo $_POST['payments_of_customer_cart'];
-}
-?>
+                                echo $_POST['payments_of_customer_cart'];
+                            }
+                            ?>
                         </p>
                     </div>
                     <div class="col-md-6 mb-3">
@@ -63,25 +63,28 @@
                     <div id="card_body_order_success" class="card-body">
 
                         <?php
-if (isset($book_in_orders)) {
-    foreach ($book_in_orders as $id => $value) {
-        ?>
-                        <div class="row">
-                            <div class="col-7">
-                                <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">
-                                <span><?php echo $value['book_name']; ?></span>
-                            </div>
-                            <p class="col-2"><?php echo $value['quantity']; ?></p>
-                            <p class="col-3 text-end">
-                                <?php echo number_format($value['quantity'] * $value['price'], 0, '', '.') . "đ"; ?></p>
-                        </div>
-                        <hr style="color: #ffe020;">
-                        <?php }}?>
+                        if (isset($book_in_orders)) {
+                            foreach ($book_in_orders as $id => $value) {
+                        ?>
+                                <div class="row">
+                                    <div class="col-7">
+                                        <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">
+                                        <span><?php echo $value['book_name']; ?></span>
+                                    </div>
+                                    <p class="col-2"><?php echo $value['quantity']; ?></p>
+                                    <p class="col-3 text-end">
+                                        <?php echo number_format($value['quantity'] * $value['price'], 0, '', '.') . "đ"; ?></p>
+                                </div>
+                                <hr style="color: #ffe020;">
+                        <?php }
+                        } ?>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between">
                             <p>Tạm tính: </p>
-                            <p><?php if (isset($_POST['total_cart_value'])) {echo number_format($_POST['total_cart_value'], 0, '', '.') . "đ";}?>
+                            <p><?php if (isset($_POST['total_cart_value'])) {
+                                    echo number_format($_POST['total_cart_value'], 0, '', '.') . "đ";
+                                } ?>
                             </p>
                         </li>
                         <li class="list-group-item d-flex justify-content-between">

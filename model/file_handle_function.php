@@ -209,9 +209,11 @@ function search_book()
     include __DIR__ . DIRECTORY_SEPARATOR . 'file_pdo_connect.php';
     if (isset($_GET['search_input_header'])) {
         $search_key = $_GET['search_input_header'];
-        $sql = "select * from book where book_name LIKE '%$search_key%'"; //not a php statement so no string concatenation needed
+        $sql = "select * from book where book_name LIKE '%:key%'"; //not a php statement so no string concatenation needed
         $stmt = $conn->prepare($sql);
-        $stmt->execute();
+        $stmt->execute([
+            'key' => $search_key,
+        ]);
 
         $result_search_key = $stmt->fetchAll();
         return $result_search_key;

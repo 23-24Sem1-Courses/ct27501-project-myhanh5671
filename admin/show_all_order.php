@@ -15,8 +15,7 @@ if (empty($_COOKIE['admin_login_successful'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đơn hàng</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- Google font -->
@@ -61,23 +60,23 @@ if (empty($_COOKIE['admin_login_successful'])) {
             </thead>
             <tbody>
                 <?php if (isset($result_of_all_orders)) {
-    foreach ($result_of_all_orders as $value) {
-        ?>
-                <tr>
-                    <td><a style="text-decoration: none;"
-                            href="detail_order.php?id_of_order=<?php echo $value['id']; ?>&status_of_order=<?php echo $value['status']; ?>">#<?php echo $value['id']; ?></a>
-                    </td>
-                    <td>
-                        <p><?php echo $value['full_name']; ?></p>
-                        <p><?php echo $value['phone_number']; ?></p>
-                    </td>
-                    <td><?php echo $value['address']; ?></td>
-                    <td><?php echo $value['email']; ?></td>
-                    <td><?php echo number_format($value['total'], 0, ",", ".") . "đ"; ?></td>
-                    <td><?php echo $value['payment']; ?></td>
-                    <td><?php echo $value['status']; ?></td>
-                </tr>
-                <?php }}?>
+                    foreach ($result_of_all_orders as $value) {
+                ?>
+                        <tr>
+                            <td><a>#<?php echo $value['id']; ?></a>
+                            </td>
+                            <td>
+                                <p><?php echo $value['full_name']; ?></p>
+                                <p><?php echo $value['phone_number']; ?></p>
+                            </td>
+                            <td><?php echo $value['address']; ?></td>
+                            <td><?php echo $value['email']; ?></td>
+                            <td><?php echo number_format($value['total'], 0, ",", ".") . "đ"; ?></td>
+                            <td><?php echo $value['payment']; ?></td>
+                            <td><?php echo $value['status']; ?></td>
+                        </tr>
+                <?php }
+                } ?>
             </tbody>
         </table>
     </main>
@@ -86,11 +85,9 @@ if (empty($_COOKIE['admin_login_successful'])) {
         <p class="container text-center">Copyright 2023 ©HK</p>
     </footer>
     <!-- footer dùng chung -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous">
     </script>
 </body>
 

@@ -4,8 +4,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="?action=home">Trang chủ</a></li>&nbsp;
-            <li class="breadcrumb-item active" aria-current="page"
-                style="color: #ffe020; font-weight: 600; font-size: 16px;">&nbsp;Giỏ hàng</li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #ffe020; font-weight: 600; font-size: 16px;">&nbsp;Giỏ hàng</li>
         </ol>
     </nav>
 </div>
@@ -25,39 +24,36 @@
             <tbody id="tbody_cart" class="text-center">
 
                 <?php if (isset($book_in_cart)) {
-    $total_cart_value = 0;
-    foreach ($book_in_cart as $id => $value) {
-        $total_cart_value += ($value['price'] * $value['quantity']);
-        ?>
-                <tr>
-                    <td style="padding-top:50px;">
-                        <a href="?action=delete_book_from_cart&id_of_book_in_cart=<?php echo $id; ?>"><i
-                                class="fas fa-trash"></i></a><!-- bổ sung href xóa sp -->
-                    </td>
-                    <td>
-                        <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">
-                    </td>
-                    <td style="padding-top:50px;">
-                        <?php echo $value['book_name']; ?>
-                    </td>
-                    <td style="padding-top:50px;">
-                        <?php echo number_format($value['price'], 0, ",", ".") . "đ"; ?>
-                    </td>
-                    <td style="padding-top:50px;">
-                        <div id="btn_change_quantity_cart" class="d-flex justify-content-around align-items-center">
-                            <a
-                                href="?action=change_quantity&change_type=decrease&id_of_book_in_cart=<?php echo $id; ?>&quantity=<?php echo $value['quantity']; ?>">-</a>
-                            <?php echo $value['quantity']; ?>
-                            <a
-                                href="?action=change_quantity&change_type=increase&id_of_book_in_cart=<?php echo $id; ?>&quantity=<?php echo $value['quantity']; ?>">+</a>
-                        </div>
-                    </td>
-                    <td style="padding-top:50px;">
-                        <?php echo number_format($value['quantity'] * $value['price'], 0, '', '.') . "đ"; ?>
-                    </td>
-                </tr>
+                    $total_cart_value = 0;
+                    foreach ($book_in_cart as $id => $value) {
+                        $total_cart_value += ($value['price'] * $value['quantity']);
+                ?>
+                        <tr>
+                            <td style="padding-top:50px;">
+                                <a href="?action=delete_book_from_cart&id_of_book_in_cart=<?php echo $id; ?>"><i class="fas fa-trash"></i></a><!-- bổ sung href xóa sp -->
+                            </td>
+                            <td>
+                                <img src="<?php echo "../admin/upload/" . $value['img']; ?>" alt="">
+                            </td>
+                            <td style="padding-top:50px;">
+                                <?php echo $value['book_name']; ?>
+                            </td>
+                            <td style="padding-top:50px;">
+                                <?php echo number_format($value['price'], 0, ",", ".") . "đ"; ?>
+                            </td>
+                            <td style="padding-top:50px;">
+                                <div id="btn_change_quantity_cart" class="d-flex justify-content-around align-items-center">
+                                    <a href="?action=change_quantity&change_type=decrease&id_of_book_in_cart=<?php echo $id; ?>&quantity=<?php echo $value['quantity']; ?>">-</a>
+                                    <?php echo $value['quantity']; ?>
+                                    <a href="?action=change_quantity&change_type=increase&id_of_book_in_cart=<?php echo $id; ?>&quantity=<?php echo $value['quantity']; ?>">+</a>
+                                </div>
+                            </td>
+                            <td style="padding-top:50px;">
+                                <?php echo number_format($value['quantity'] * $value['price'], 0, '', '.') . "đ"; ?>
+                            </td>
+                        </tr>
                 <?php }
-}?>
+                } ?>
                 <tr>
                     <td></td>
                     <td></td>
@@ -66,8 +62,8 @@
                     </td>
                     <td>
                         <h4><?php if (isset($total_cart_value)) {
-    echo number_format($total_cart_value, 0, ",", ".") . "đ";
-}?>
+                                echo number_format($total_cart_value, 0, ",", ".") . "đ";
+                            } ?>
                         </h4>
                     </td>
                 </tr>
@@ -83,27 +79,24 @@
             <div class="mb-3">
                 <label for="fullname_customer_cart" class="form-label">Họ và tên:</label>
                 <input type="text" name="fullname_customer_cart" class="form-control" id="fullname_customer_cart" value="<?php if (isset($_SESSION['remember_username_login'])) {
-    echo $_SESSION['remember_username_login'];
-}?>" required>
+                                                                                                                                echo $_SESSION['remember_username_login'];
+                                                                                                                            } ?>" required>
             </div>
             <div class="mb-3">
                 <label for="email_customer_cart" class="form-label">Địa chỉ email:</label>
-                <input type="email" name="email_customer_cart" class="form-control" id="email_customer_cart"
-                    aria-describedby="emailHelp" value="<?php if (isset($_SESSION['remember_email_login'])) {
-    echo $_SESSION['remember_email_login'];
-}?>" required>
+                <input type="email" name="email_customer_cart" class="form-control" id="email_customer_cart" aria-describedby="emailHelp" value="<?php if (isset($_SESSION['remember_email_login'])) {
+                                                                                                                                                        echo $_SESSION['remember_email_login'];
+                                                                                                                                                    } ?>" required>
             </div>
             <div class="mb-3">
                 <label for="phone_number_customer_cart" class="form-label">Số điện thoại:</label>
-                <input type="text" name="phone_number_customer_cart" class="form-control"
-                    id="phone_number_customer_cart" value="<?php if (isset($_SESSION['remember_phone_number_login'])) {
-    echo $_SESSION['remember_phone_number_login'];
-}?>" required>
+                <input type="text" name="phone_number_customer_cart" class="form-control" id="phone_number_customer_cart" value="<?php if (isset($_SESSION['remember_phone_number_login'])) {
+                                                                                                                                        echo $_SESSION['remember_phone_number_login'];
+                                                                                                                                    } ?>" required>
             </div>
             <div class="mb-3">
                 <label for="address_customer_cart" class="form-label">Địa chỉ nhận hàng:</label>
-                <input type="text" name="address_customer_cart" class="form-control" id="address_customer_cart"
-                    required>
+                <input type="text" name="address_customer_cart" class="form-control" id="address_customer_cart" required>
             </div>
             <div class="mb-3">
                 <label for="note_customer_cart" class="form-label">Ghi chú:</label>
@@ -111,8 +104,7 @@
             </div>
             <div class="mb-3">
                 <label for="payments_of_customer_cart" class="form-label">Hình thức thanh toán:</label>
-                <input type="text" id="payments_of_customer_cart" class="form-control border-0"
-                    name="payments_of_customer_cart" value="Thanh toán khi nhận hàng (COD)" readonly>
+                <input type="text" id="payments_of_customer_cart" class="form-control border-0" name="payments_of_customer_cart" value="Thanh toán khi nhận hàng (COD)" readonly>
             </div>
             <input type="hidden" name="total_cart_value" value="<?php echo $total_cart_value; ?>">
             <button type="submit" class="btn btn-primary" id="btn_agree_order_cart" name="btn_agree_order_cart">

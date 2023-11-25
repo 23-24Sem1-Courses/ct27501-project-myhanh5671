@@ -148,7 +148,6 @@ if (isset($_GET['action'])) {
             include '../view/home.php';
             break;
     }
-
 } else {
     include '../view/home.php';
 }

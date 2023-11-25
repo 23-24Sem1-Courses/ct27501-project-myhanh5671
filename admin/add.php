@@ -11,8 +11,10 @@ $result_of_all_category = get_all_category();
 
 //Lấy data từ form và xử lý
 if (isset($_POST['btn_add_book_add'])) {
-    if (isset($_POST['name_book_add']) && isset($_POST['price_book_add']) && isset($_POST['category_book_add']) && isset($_POST['des_book_add'])
-        && isset($_POST['author_book_add']) && isset($_POST['nxb_book_add']) && isset($_FILES['img_book_add'])) {
+    if (
+        isset($_POST['name_book_add']) && isset($_POST['price_book_add']) && isset($_POST['category_book_add']) && isset($_POST['des_book_add'])
+        && isset($_POST['author_book_add']) && isset($_POST['nxb_book_add']) && isset($_FILES['img_book_add'])
+    ) {
         $name_of_book = $_POST['name_book_add'];
         $price_of_book = $_POST['price_book_add'];
         $category_of_book = $_POST['category_book_add'];
@@ -52,8 +54,7 @@ if (isset($_POST['btn_add_book_add'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm sách</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- Google font -->
@@ -83,8 +84,7 @@ if (isset($_POST['btn_add_book_add'])) {
             <p class="text-center">Thêm sách mới</p>
         </div>
         <div class="row">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"
-                enctype="multipart/form-data">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name_book_add" class="form-label">Tên sách:</label>
                     <input type="text" name="name_book_add" class="form-control" id="name_book_add" required>
@@ -100,12 +100,13 @@ if (isset($_POST['btn_add_book_add'])) {
                         <option value="2">Đồng hồ nữ</option>
                         <option value="3">Phụ kiện</option> -->
                         <?php
-if (isset($result_of_all_category)) {
-    foreach ($result_of_all_category as $value) {
-        ?>
-                        <option value="<?php echo $value['id']; ?>"><?php echo $value['category_name']; ?></option>
+                        if (isset($result_of_all_category)) {
+                            foreach ($result_of_all_category as $value) {
+                        ?>
+                                <option value="<?php echo $value['id']; ?>"><?php echo $value['category_name']; ?></option>
 
-                        <?php }}?>
+                        <?php }
+                        } ?>
 
                     </select>
                 </div>
